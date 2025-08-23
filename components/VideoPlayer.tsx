@@ -5,20 +5,6 @@ interface VideoPlayerProps {
   video: Video | null;
 }
 
-function buildVimeoSrc(idWithHash: string) {
-  const [id, hash] = idWithHash.split('?h=');
-  const url = new URL(`https://player.vimeo.com/video/${id}`);
-  if (hash) url.searchParams.set('h', hash);
-  url.searchParams.set('autoplay', '1');
-  url.searchParams.set('badge', '0');
-  url.searchParams.set('autopause', '0');
-  url.searchParams.set('player_id', '0');
-  url.searchParams.set('app_id', '58479');
-  url.searchParams.set('dnt', '1'); // helps with some blockers
-  url.searchParams.set('muted', '1'); // helps with autoplay on mobile
-  return url.toString();
-}
-
 function VideoPlayer({ video }: VideoPlayerProps) {
   if (!video) {
     return (
@@ -32,8 +18,12 @@ function VideoPlayer({ video }: VideoPlayerProps) {
   if (video.platform === 'youtube') {
     videoSrc = `https://www.youtube.com/embed/${video.videoId}?autoplay=1&rel=0`;
   } else if (video.platform === 'vimeo') {
-    videoSrc = buildVimeoSrc(video.videoId);
+    // Use the exact same format as your working hardcoded videos
+    videoSrc = `https://player.vimeo.com/video/${video.videoId}&badge=0&autopause=0&player_id=0&app_id=58479`;
   }
+
+  console.log('Video src:', videoSrc); // Debug log
+  console.log('Video object:', video); // Debug log
 
   return (
     <div className="bg-black rounded-lg overflow-hidden">
@@ -51,6 +41,7 @@ function VideoPlayer({ video }: VideoPlayerProps) {
       <div className="p-4 sm:p-6">
         <h3 className="text-xl sm:text-2xl font-bold font-serif text-brand-gold">{video.title}</h3>
         <p className="mt-2 text-gray-300">{video.description}</p>
+        <p className="mt-2 text-gray-500 text-sm">Debug: {videoSrc}</p>
       </div>
     </div>
   );
