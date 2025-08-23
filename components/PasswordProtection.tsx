@@ -14,8 +14,8 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({ onPasswordCorre
     setIsLoading(true);
     setError('');
 
-    // Simple password check - in production, you'd want to hash this
-    const correctPassword = import.meta.env.VITE_SITE_PASSWORD;
+    // Password check - you'll set this when you deploy
+    const correctPassword = import.meta.env.VITE_SITE_PASSWORD || 'OPERATOR2025';
     
     if (password === correctPassword) {
       // Store in sessionStorage so they don't need to re-enter during session
