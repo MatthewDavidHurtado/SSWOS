@@ -44,6 +44,16 @@ function App() {
   // State for Bible portal
   const [currentLesson, setCurrentLesson] = useState<BibleStudyLesson>(BIBLE_STUDY_LESSONS[0]);
 
+  const handleLogout = useCallback(() => {
+    // Clear all stored authentication data
+    localStorage.removeItem('isLoggedIn');
+    sessionStorage.removeItem('siteAccess');
+    
+    // Reset authentication states
+    setIsAuthenticated(false);
+    setHasAccess(false);
+  }, []);
+
   useEffect(() => {
     // Check for site access first
     const siteAccess = sessionStorage.getItem('siteAccess');
@@ -104,6 +114,7 @@ function App() {
         onOpenCipherModal={() => setIsCipherModalOpen(true)}
         onOpenHealingMeditation={() => setIsHealingMeditationOpen(true)}
         onOpenSswosProcess={() => setIsSswosProcessOpen(true)}
+        onLogout={handleLogout}
       />
       <main className="flex-grow p-4 sm:p-6 lg:p-8 max-w-screen-2xl mx-auto w-full">
         {isFullWidthView ? (

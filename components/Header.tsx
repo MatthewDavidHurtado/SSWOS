@@ -12,6 +12,7 @@ interface HeaderProps {
   onOpenCipherModal: () => void;
   onOpenHealingMeditation: () => void;
   onOpenSswosProcess: () => void;
+  onLogout: () => void;
 }
 
 
@@ -63,6 +64,12 @@ const ShareIcon = () => (
     </svg>
 );
 
+const LogoutIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clipRule="evenodd" />
+    </svg>
+);
+
 const ChevronDownIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={className || "h-5 w-5"} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -83,7 +90,7 @@ const ClipboardListIcon = () => (
 );
 
 
-function Header({ activePortal, onPortalSwitch, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess }: HeaderProps) {
+function Header({ activePortal, onPortalSwitch, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
   const portalButtonBaseStyle = "px-4 sm:px-6 py-2 text-sm font-bold font-serif transition-colors duration-300 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap";
   const activePortalStyle = "bg-black text-brand-gold shadow-inner";
   const inactivePortalStyle = "bg-gray-800/60 text-gray-400 hover:bg-gray-700/80 hover:text-white";
@@ -169,6 +176,10 @@ function Header({ activePortal, onPortalSwitch, onOpenSlaughterhouse, onOpenTrea
                     </a>
                     <button onClick={() => { onOpenShareModal(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
                         <ShareIcon /> Share Private Invite
+                    </button>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <button onClick={() => { onLogout(); setIsDropdownOpen(false); }} className={`${dropdownItemStyle} text-red-400 hover:text-red-300 hover:bg-red-900/20`} role="menuitem">
+                        <LogoutIcon /> Logout
                     </button>
                   </div>
                 </div>
