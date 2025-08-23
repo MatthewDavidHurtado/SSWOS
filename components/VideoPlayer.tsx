@@ -46,8 +46,6 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
     videoSrc = buildVimeoSrc(video.videoId);
   }
 
-  console.log('Generated Vimeo URL:', videoSrc); // Debug log
-
   return (
     <div className="bg-black rounded-lg overflow-hidden">
       <div className="relative w-full h-0 pb-[56.25%]">
