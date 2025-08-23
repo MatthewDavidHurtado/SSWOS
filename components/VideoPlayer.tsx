@@ -19,7 +19,7 @@ function VideoPlayer({ video }: VideoPlayerProps) {
     videoSrc = `https://www.youtube.com/embed/${video.videoId}?autoplay=1&rel=0`;
   } else if (video.platform === 'vimeo') {
     // Use the exact format that works in your other components
-    videoSrc = `https://player.vimeo.com/video/${video.videoId}&badge=0&autopause=0&player_id=0&app_id=58479`;
+    videoSrc = `https://player.vimeo.com/video/${video.videoId}&autoplay=1&badge=0&autopause=0&player_id=0&app_id=58479`;
   }
 
   return (
