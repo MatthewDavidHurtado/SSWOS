@@ -12,6 +12,7 @@ import SidebarMbe from './components/SidebarMbe';
 import SidebarBible from './components/SidebarBible';
 import Footer from './components/Footer';
 import LoginScreen from './components/LoginScreen';
+import PasswordProtection from './components/PasswordProtection';
 import TreatmentView from './components/TreatmentView';
 import AdvancedTreatmentView from './components/AdvancedTreatmentView';
 import SlaughterhouseModal from './components/SlaughterhouseModal';
@@ -24,6 +25,7 @@ import SswosProcessModal from './components/SswosProcessModal';
 type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
 
 function App() {
+  const [hasAccess, setHasAccess] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activePortal, setActivePortal] = useState<Portal>('rawson');
   const [isSlaughterhouseOpen, setIsSlaughterhouseOpen] = useState(false);
@@ -43,6 +45,12 @@ function App() {
   const [currentLesson, setCurrentLesson] = useState<BibleStudyLesson>(BIBLE_STUDY_LESSONS[0]);
 
   useEffect(() => {
+    // Check for site access first
+    const siteAccess = sessionStorage.getItem('siteAccess');
+    if (siteAccess === 'granted') {
+      setHasAccess(true);
+    }
+
     // Check for a saved session when the app loads
     const loggedInStatus = localStorage.getItem('isLoggedIn');
     if (loggedInStatus === 'true') {
@@ -62,6 +70,9 @@ function App() {
     setCurrentLesson(lesson);
   }, []);
 
+  const handlePasswordCorrect = useCallback(() => {
+    setHasAccess(true);
+  }, []);
   const handleLoginSuccess = useCallback((stayLoggedIn: boolean) => {
     setIsAuthenticated(true);
     if (stayLoggedIn) {
@@ -73,6 +84,9 @@ function App() {
     setActivePortal(portal);
   }, []);
 
+  if (!hasAccess) {
+    return <PasswordProtection onPasswordCorrect={handlePasswordCorrect} />;
+  }
   if (!isAuthenticated) {
     return <LoginScreen onLoginSuccess={handleLoginSuccess} />;
   }
