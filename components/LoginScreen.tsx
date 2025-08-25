@@ -89,6 +89,15 @@ function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
                 What Is This Training?
               </a>
               
+              <a
+                href="https://the-secret-source-code-759385455270.us-west1.run.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-gray-800 text-white px-6 py-3 rounded-md font-bold text-lg hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-gray-600 flex items-center justify-center gap-2 border border-gray-600"
+              >
+                What Is This Training?
+              </a>
+              
               <div className="flex items-center">
                   <input
                       id="stay-logged-in"
