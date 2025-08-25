@@ -43,16 +43,13 @@ function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
         {/* Form Panel (Left side on desktop) */}
         <div className="w-full md:w-1/2 lg:w-5/12 bg-black flex flex-col justify-center p-8 sm:p-12 order-2 md:order-1">
           <div className="w-full max-w-md mx-auto animate-fade-in">
-            <img
-              src="https://i.imgur.com/zDr7njf.png"
-              alt="Gnostic Symbol Logo"
-              className="mb-8 h-12 w-12 sm:h-16 sm:w-16"
-            />
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-2">
-              Welcome, Operator
+            <h1 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-2 leading-tight">
+              Master The Forbidden Gnosis<br />
+              that Breaks The Illusion of Evil<br />
+              and Restores Heaven, Now!
             </h1>
-            <p className="text-gray-400 mb-10">
-              Your training begins now. Press the button below to proceed.
+            <p className="text-gray-400 mb-10 text-lg font-semibold">
+              Complete 90-Day Training System.
             </p>
             
             {/* Welcome Video Section */}
