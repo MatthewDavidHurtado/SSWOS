@@ -44,15 +44,9 @@ function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
         <div className="w-full md:w-1/2 lg:w-5/12 bg-black flex flex-col justify-center p-8 sm:p-12 order-2 md:order-1">
           <div className="w-full max-w-md mx-auto animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-white mb-4 leading-none tracking-tight">
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-white leading-tight tracking-wide block">
-                Master The Forbidden Gnosis
-              </span>
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-white leading-tight tracking-wide block">
-                that Breaks Evil's Illusion
-              </span>
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-brand-gold leading-tight tracking-wide block">
-                and Restores Heaven, Now!
-              </span>
+              Master The Forbidden Gnosis<br />
+              that Breaks Evil's Illusion<br />
+              <span className="text-brand-gold">and Restores Heaven, Now!</span>
             </h1>
             <p className="text-gray-300 mb-10 text-xl font-semibold tracking-wide">
               Complete 90-Day Training System.
