@@ -55,6 +55,24 @@ function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
               Your training begins now. Press the button below to proceed.
             </p>
             
+            {/* Welcome Video Section */}
+            <div className="mb-8">
+                <h2 className="text-lg font-semibold font-serif text-brand-light-gold text-center mb-4">
+                    Welcome Briefing
+                </h2>
+                <div className="relative w-full overflow-hidden rounded-lg border-2 border-gray-700 shadow-lg" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
+                  <iframe
+                    className="absolute top-1/2 left-0 w-full"
+                    style={{ height: '316%', transform: 'translateY(-42%)' }} // Scale and position vertical video to cover landscape container, framing the upper portion.
+                    src="https://player.vimeo.com/video/1112146904?h=400a7dba5f&badge=0&autopause=0&player_id=0&app_id=58479"
+                    title="Welcome Video"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+            </div>
+
             {/* CTA Section */}
             <div className="space-y-6">
               <button
@@ -79,23 +97,6 @@ function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
               </div>
             </div>
 
-            {/* Welcome Video Section */}
-            <div className="mt-12 pt-8 border-t border-gray-800/50">
-                <h2 className="text-lg font-semibold font-serif text-brand-light-gold text-center mb-4">
-                    Welcome Briefing
-                </h2>
-                <div className="relative w-full overflow-hidden rounded-lg border-2 border-gray-700 shadow-lg" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
-                  <iframe
-                    className="absolute top-1/2 left-0 w-full"
-                    style={{ height: '316%', transform: 'translateY(-42%)' }} // Scale and position vertical video to cover landscape container, framing the upper portion.
-                    src="https://player.vimeo.com/video/1112146904?h=400a7dba5f&badge=0&autopause=0&player_id=0&app_id=58479"
-                    title="Welcome Video"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-            </div>
 
           </div>
         </div>
