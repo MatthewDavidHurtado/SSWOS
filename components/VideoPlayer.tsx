@@ -18,14 +18,11 @@ function buildVimeoSrc(idWithHash: string) {
   }
 
   // Helpful defaults for dev/previews
-  url.searchParams.set("autoplay", "1");
-  url.searchParams.set("muted", "1");         // mobile autoplay policies
   url.searchParams.set("playsinline", "1");   // iOS inline playback
   url.searchParams.set("badge", "0");
   url.searchParams.set("autopause", "0");
   url.searchParams.set("player_id", "0");
   url.searchParams.set("app_id", "58479");
-  url.searchParams.set("dnt", "1");           // fewer tracking/cookie headaches
 
   return url.toString();
 }
