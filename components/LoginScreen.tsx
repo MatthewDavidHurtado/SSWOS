@@ -45,7 +45,7 @@ function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
           <div className="w-full max-w-md mx-auto animate-fade-in">
             <h1 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-2 leading-tight">
               Master The Forbidden Gnosis<br />
-              that Breaks The Illusion of Evil<br />
+              that Breaks Evil's Illusion<br />
               and Restores Heaven, Now!
             </h1>
             <p className="text-gray-400 mb-10 text-lg font-semibold">
