@@ -89,6 +89,15 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({ onPasswordCorre
             >
               {isLoading ? 'Verifying...' : 'Enter Training'}
             </button>
+
+            <a
+              href="https://the-secret-source-code-759385455270.us-west1.run.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gray-700 text-white px-6 py-3 rounded-md font-bold text-lg hover:bg-gray-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-gray-500 text-center block"
+            >
+              What Is This Training?
+            </a>
           </form>
 
           <div className="mt-6 pt-6 border-t border-gray-700">
