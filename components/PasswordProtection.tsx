@@ -55,7 +55,8 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({ onPasswordCorre
             Access Required
           </h2>
           <p className="text-gray-400 mb-6 text-center">
-            Enter the access code to proceed to training.
+            Enter the access code<br />
+            to proceed to SSWOS training.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
