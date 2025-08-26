@@ -56,7 +56,7 @@ const ShareModal: React.FC<ShareModalProps> = ({ onClose }) => {
         
         <div className="space-y-4">
             <a 
-                href="https://spiritual-special-forces-operator-school-759385455270.us-west1.run.app/"
+                href="https://the-secret-source-code-759385455270.us-west1.run.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${buttonBaseStyle} ${activeButtonStyle}`}
