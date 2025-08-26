@@ -1,7 +1,17 @@
 
 import React from 'react';
 
-function Footer() {
+interface FooterProps {
+  onOpenQuickStart: () => void;
+}
+
+const PlayCircleIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+  </svg>
+);
+
+function Footer({ onOpenQuickStart }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -32,6 +42,17 @@ function Footer() {
 
           {/* Disclaimer Section */}
           <div className="space-y-4">
+            {/* Quick Start Video Series Link */}
+            <div className="mb-8">
+              <button
+                onClick={onOpenQuickStart}
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-brand-gold/10 to-brand-light-gold/10 border border-brand-gold/30 rounded-full text-brand-light-gold hover:from-brand-gold/20 hover:to-brand-light-gold/20 hover:border-brand-gold/50 transition-all duration-300 font-serif font-semibold tracking-wide focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold"
+              >
+                <PlayCircleIcon />
+                <span>Quick Start Video Series</span>
+              </button>
+            </div>
+            
             <p className="font-bold text-gray-400 font-serif tracking-widest">DISCLAIMER</p>
             <p>
               The content provided on this website, including all video lessons, written materials, and AI-powered chat interactions, is for informational, educational, and entertainment purposes only. The teachings and perspectives shared are based on gnostic and esoteric traditions and represent the views of the author. They are not intended to be a substitute for professional medical, psychological, legal, or financial advice.

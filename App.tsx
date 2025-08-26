@@ -21,6 +21,7 @@ import CipherModal from './components/CipherModal';
 import ShareModal from './components/ShareModal';
 import HealingMeditationModal from './components/HealingMeditationModal';
 import SswosProcessModal from './components/SswosProcessModal';
+import QuickStartModal from './components/QuickStartModal';
 
 type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
 
@@ -34,6 +35,7 @@ function App() {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [isHealingMeditationOpen, setIsHealingMeditationOpen] = useState(false);
   const [isSswosProcessOpen, setIsSswosProcessOpen] = useState(false);
+  const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
 
   // State for Rawson portal
   const [currentVideo, setCurrentVideo] = useState<Video>(COURSE_VIDEOS[0]);
@@ -174,13 +176,14 @@ function App() {
         )}
       </main>
       
-      <Footer />
+      <Footer onOpenQuickStart={() => setIsQuickStartOpen(true)} />
       {isSlaughterhouseOpen && <SlaughterhouseModal onClose={() => setIsSlaughterhouseOpen(false)} />}
       {isTreatmentOutlineOpen && <TreatmentOutlineModal onClose={() => setIsTreatmentOutlineOpen(false)} />}
       {isCipherModalOpen && <CipherModal onClose={() => setIsCipherModalOpen(false)} />}
       {isShareModalOpen && <ShareModal onClose={() => setIsShareModalOpen(false)} />}
       {isHealingMeditationOpen && <HealingMeditationModal onClose={() => setIsHealingMeditationOpen(false)} />}
       {isSswosProcessOpen && <SswosProcessModal onClose={() => setIsSswosProcessOpen(false)} />}
+      {isQuickStartOpen && <QuickStartModal onClose={() => setIsQuickStartOpen(false)} />}
     </div>
   );
 }
