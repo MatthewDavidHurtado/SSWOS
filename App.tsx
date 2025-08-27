@@ -199,11 +199,25 @@ function App() {
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 controls
                 preload="metadata"
-                poster=""
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
               >
                 <source src="https://healvideos.s3.us-east-2.amazonaws.com/permanent_overflow_is_yours_already_-_claim_it.+(720p).mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              
+              {/* Overlay text that appears before video plays */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="text-center space-y-2 opacity-70">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white/80" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-white/90 font-serif text-lg sm:text-xl font-medium tracking-wide">
+                    Press Play: Tithing Masterclass
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
