@@ -22,6 +22,7 @@ import ShareModal from './components/ShareModal';
 import HealingMeditationModal from './components/HealingMeditationModal';
 import SswosProcessModal from './components/SswosProcessModal';
 import QuickStartModal from './components/QuickStartModal';
+import LiveTrainingModal from './components/LiveTrainingModal';
 
 type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
 
@@ -36,6 +37,7 @@ function App() {
   const [isHealingMeditationOpen, setIsHealingMeditationOpen] = useState(false);
   const [isSswosProcessOpen, setIsSswosProcessOpen] = useState(false);
   const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
+  const [isLiveTrainingOpen, setIsLiveTrainingOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -113,6 +115,7 @@ function App() {
         activePortal={activePortal} 
         onPortalSwitch={handlePortalSwitch} 
         onOpenQuickStart={() => setIsQuickStartOpen(true)}
+        onOpenLiveTraining={() => setIsLiveTrainingOpen(true)}
         onOpenSlaughterhouse={() => setIsSlaughterhouseOpen(true)}
         onOpenTreatmentOutline={() => setIsTreatmentOutlineOpen(true)}
         onOpenShareModal={() => setIsShareModalOpen(true)}
@@ -239,6 +242,7 @@ function App() {
       {isHealingMeditationOpen && <HealingMeditationModal onClose={() => setIsHealingMeditationOpen(false)} />}
       {isSswosProcessOpen && <SswosProcessModal onClose={() => setIsSswosProcessOpen(false)} />}
       {isQuickStartOpen && <QuickStartModal onClose={() => setIsQuickStartOpen(false)} />}
+      {isLiveTrainingOpen && <LiveTrainingModal onClose={() => setIsLiveTrainingOpen(false)} />}
     </div>
   );
 }

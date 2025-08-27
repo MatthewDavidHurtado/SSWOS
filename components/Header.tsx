@@ -7,6 +7,7 @@ interface HeaderProps {
   activePortal: Portal;
   onPortalSwitch: (portal: Portal) => void;
   onOpenQuickStart: () => void;
+  onOpenLiveTraining: () => void;
   onOpenSlaughterhouse: () => void;
   onOpenTreatmentOutline: () => void;
   onOpenShareModal: () => void;
@@ -98,6 +99,7 @@ const PlayCircleIcon = () => (
 
 
 function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
+function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenLiveTraining, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
   const portalButtonBaseStyle = "px-4 sm:px-6 py-2 text-sm font-bold font-serif transition-colors duration-300 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap";
   const activePortalStyle = "bg-black text-brand-gold shadow-inner";
   const inactivePortalStyle = "bg-gray-800/60 text-gray-400 hover:bg-gray-700/80 hover:text-white";
@@ -148,6 +150,17 @@ function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughte
               >
                 <PlayCircleIcon />
                 <span className="hidden sm:inline">Quick Start</span>
+              </button>
+              
+              <button
+                onClick={onOpenLiveTraining}
+                className="bg-red-600 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-red-500 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-red-500 border border-red-500 whitespace-nowrap"
+                aria-label="Open Live Training"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                </svg>
+                <span className="hidden sm:inline">Live Training</span>
               </button>
               
               <div className="relative" ref={dropdownRef}>
