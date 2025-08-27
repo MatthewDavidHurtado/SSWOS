@@ -177,6 +177,38 @@ function App() {
         )}
       </main>
       
+      {/* Test Me In This Section */}
+      <section className="py-16 sm:py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-white mb-8 tracking-wider">
+            "TEST ME IN THIS..."
+          </h2>
+          
+          <blockquote className="mb-12 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 italic leading-relaxed mb-6">
+              "Bring the whole tithe into the storehouse, that there may be food in My house. Test Me in this," says the Lord of hosts, "and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it."
+            </p>
+            <cite className="block not-italic text-base sm:text-lg text-gray-500">
+              — Malachi 3:10
+            </cite>
+          </blockquote>
+          
+          <div className="relative w-full max-w-4xl mx-auto">
+            <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-2xl border-2 border-brand-gold/20">
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                controls
+                preload="metadata"
+                poster=""
+              >
+                <source src="https://healvideos.s3.us-east-2.amazonaws.com/permanent_overflow_is_yours_already_-_claim_it.+(720p).mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <Footer />
       {isSlaughterhouseOpen && <SlaughterhouseModal onClose={() => setIsSlaughterhouseOpen(false)} />}
       {isTreatmentOutlineOpen && <TreatmentOutlineModal onClose={() => setIsTreatmentOutlineOpen(false)} />}
