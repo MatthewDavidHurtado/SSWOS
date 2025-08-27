@@ -102,6 +102,27 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
               </button>
             ))}
           </div>
+
+          {/* Schedule Section */}
+          <div className="mt-12 text-center space-y-4 border-t border-gray-700 pt-8">
+            <h4 className="text-xl font-serif text-brand-light-gold">
+              Every SSWOS Operator Gets A 1.5-Hour Custom "Life Blueprint" Session to Import Their Trauma-Tracks Into The Bio-Code/Mentor Platform.
+            </h4>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              This builds your custom mentor to assist you in getting micro-shifts and identifying all your biological patterns.
+            </p>
+            <a
+              href="https://calendly.com/malcolmkingley/life-blueprint-session"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand-gold text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-brand-light-gold transition-colors duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+              </svg>
+              SCHEDULE WITH MALCOLM
+            </a>
+          </div>
         </div>
       </div>
       
