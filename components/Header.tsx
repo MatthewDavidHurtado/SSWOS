@@ -122,9 +122,9 @@ function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughte
   return (
     <>
       <header className="bg-brand-dark shadow-lg sticky top-0 z-50">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3 sm:gap-4">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-0">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between min-h-[4rem] sm:h-16 gap-3 sm:gap-0">
+            <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
               <img
                 src="https://i.imgur.com/zDr7njf.png"
                 alt="Gnostic Symbol Logo"
@@ -140,10 +140,10 @@ function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughte
               </div>
             </div>
             
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
               <button
                 onClick={onOpenQuickStart}
-                className="bg-gray-800 text-white px-4 py-2 rounded-full flex items-center gap-2 font-bold hover:bg-gray-700 transition-colors duration-300 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-white border border-gray-600"
+                className="bg-gray-800 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-gray-700 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-white border border-gray-600 whitespace-nowrap"
                 aria-label="Open Quick Start Video Series"
               >
                 <PlayCircleIcon />
@@ -153,11 +153,12 @@ function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughte
               <div className="relative" ref={dropdownRef}>
               <button 
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="bg-brand-gold text-black px-4 py-2 rounded-full flex items-center gap-2 font-bold hover:bg-brand-light-gold transition-colors duration-300 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold"
+                className="bg-brand-gold text-black px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-brand-light-gold transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap"
                 aria-haspopup="true"
                 aria-expanded={isDropdownOpen}
               >
-                <span>Operator Tools</span>
+                <span className="hidden xs:inline sm:inline">Operator Tools</span>
+                <span className="xs:hidden sm:hidden">Tools</span>
                 <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
