@@ -13,7 +13,6 @@ interface HeaderProps {
   onOpenCipherModal: () => void;
   onOpenHealingMeditation: () => void;
   onOpenSswosProcess: () => void;
-  onOpenQuickStart: () => void;
   onLogout: () => void;
 }
 
@@ -91,14 +90,6 @@ const ClipboardListIcon = () => (
     </svg>
 );
 
-const PlayCircleIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-    </svg>
-);
-
-
-function Header({ activePortal, onPortalSwitch, onOpenLiveTraining, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onOpenQuickStart, onLogout }: HeaderProps) {
   const portalButtonBaseStyle = "px-4 sm:px-6 py-2 text-sm font-bold font-serif transition-colors duration-300 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap";
   const activePortalStyle = "bg-black text-brand-gold shadow-inner";
   const inactivePortalStyle = "bg-gray-800/60 text-gray-400 hover:bg-gray-700/80 hover:text-white";
@@ -142,15 +133,6 @@ function Header({ activePortal, onPortalSwitch, onOpenLiveTraining, onOpenSlaugh
             </div>
             
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              <button
-                onClick={onOpenQuickStart}
-                className="bg-green-600 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-green-500 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-green-500 border border-green-500 whitespace-nowrap"
-                aria-label="Open Quick Start Training"
-              >
-                <PlayCircleIcon />
-                <span className="hidden sm:inline">Quick Start Training</span>
-              </button>
-              
               <button
                 onClick={onOpenLiveTraining}
                 className="bg-red-600 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-red-500 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-red-500 border border-red-500 whitespace-nowrap"
