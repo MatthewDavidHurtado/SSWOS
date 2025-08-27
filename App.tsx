@@ -242,7 +242,6 @@ function App() {
       {isHealingMeditationOpen && <HealingMeditationModal onClose={() => setIsHealingMeditationOpen(false)} />}
       {isSswosProcessOpen && <SswosProcessModal onClose={() => setIsSswosProcessOpen(false)} />}
       {isLiveTrainingOpen && <LiveTrainingModal onClose={() => setIsLiveTrainingOpen(false)} />}
-      {isQuickStartOpen && <QuickStartModal onClose={() => setIsQuickStartOpen(false)} />}
     </div>
   );
 }

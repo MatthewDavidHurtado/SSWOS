@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 
 type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
@@ -16,6 +15,7 @@ interface HeaderProps {
   onLogout: () => void;
 }
 
+function Header({ activePortal, onPortalSwitch, onOpenLiveTraining, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
 
 const HeartIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
