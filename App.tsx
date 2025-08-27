@@ -37,6 +37,7 @@ function App() {
   const [isHealingMeditationOpen, setIsHealingMeditationOpen] = useState(false);
   const [isSswosProcessOpen, setIsSswosProcessOpen] = useState(false);
   const [isLiveTrainingOpen, setIsLiveTrainingOpen] = useState(false);
+  const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -120,6 +121,7 @@ function App() {
         onOpenCipherModal={() => setIsCipherModalOpen(true)}
         onOpenHealingMeditation={() => setIsHealingMeditationOpen(true)}
         onOpenSswosProcess={() => setIsSswosProcessOpen(true)}
+        onOpenQuickStart={() => setIsQuickStartOpen(true)}
         onLogout={handleLogout}
       />
       <main className="flex-grow p-4 sm:p-6 lg:p-8 max-w-screen-2xl mx-auto w-full">
@@ -240,6 +242,7 @@ function App() {
       {isHealingMeditationOpen && <HealingMeditationModal onClose={() => setIsHealingMeditationOpen(false)} />}
       {isSswosProcessOpen && <SswosProcessModal onClose={() => setIsSswosProcessOpen(false)} />}
       {isLiveTrainingOpen && <LiveTrainingModal onClose={() => setIsLiveTrainingOpen(false)} />}
+      {isQuickStartOpen && <QuickStartModal onClose={() => setIsQuickStartOpen(false)} />}
     </div>
   );
 }
