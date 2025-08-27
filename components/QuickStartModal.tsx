@@ -4,6 +4,12 @@ interface QuickStartModalProps {
   onClose: () => void;
 }
 
+const CalendarIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+  </svg>
+);
+
 const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -46,13 +52,41 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
             </svg>
           </button>
         </div>
-        <div className="flex-grow p-1 h-full">
-          <iframe
-            src={embedUrl}
-            title="Quick Start Video Series"
-            className="w-full h-full border-0 rounded-b-md bg-gray-900"
-            allow="fullscreen"
-          />
+        <div className="flex-grow flex flex-col overflow-hidden">
+          <div className="flex-grow p-1">
+            <iframe
+              src={embedUrl}
+              title="Quick Start Video Series"
+              className="w-full h-full border-0 rounded-b-md bg-gray-900"
+              allow="fullscreen"
+            />
+          </div>
+          
+          {/* Schedule with Malcolm Section */}
+          <div className="border-t border-gray-700 bg-brand-dark/50 p-6">
+            <div className="text-center space-y-4">
+              <div className="space-y-3">
+                <p className="text-gray-300 text-base leading-relaxed">
+                  Every SSWOS Operator Gets A 1.5-Hour Custom "Life Blueprint" Session to Import Their Trauma-Tracks Into The Bio-Code/Mentor Platform.
+                </p>
+                <p className="text-gray-400 text-sm">
+                  This builds your custom mentor to assist you in getting micro-shifts and identifying all your biological patterns.
+                </p>
+              </div>
+              
+              <a
+                href="https://calendly.com/sealintelligence/spiritual-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-brand-gold text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-brand-light-gold transition-colors duration-300 shadow-lg hover:shadow-brand-gold/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
+              >
+                <div className="flex items-center gap-2">
+                  <CalendarIcon />
+                  <span>SCHEDULE WITH MALCOLM</span>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <style>{`
