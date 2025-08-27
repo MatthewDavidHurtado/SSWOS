@@ -52,40 +52,39 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
             </svg>
           </button>
         </div>
-        <div className="flex-grow flex flex-col overflow-hidden">
-          <div className="flex-grow p-1">
-            <iframe
-              src={embedUrl}
-              title="Quick Start Video Series"
-              className="w-full h-full border-0 rounded-b-md bg-gray-900"
-              allow="fullscreen"
-            />
-          </div>
-          
-          {/* Schedule with Malcolm Section */}
-          <div className="border-t border-gray-700 bg-brand-dark/50 p-6">
-            <div className="text-center space-y-4">
-              <div className="space-y-3">
-                <p className="text-gray-300 text-base leading-relaxed">
-                  Every SSWOS Operator Gets A 1.5-Hour Custom "Life Blueprint" Session to Import Their Trauma-Tracks Into The Bio-Code/Mentor Platform.
-                </p>
-                <p className="text-gray-400 text-sm">
-                  This builds your custom mentor to assist you in getting micro-shifts and identifying all your biological patterns.
-                </p>
-              </div>
-              
-              <a
-                href="https://calendly.com/sealintelligence/spiritual-consultation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-brand-gold text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-brand-light-gold transition-colors duration-300 shadow-lg hover:shadow-brand-gold/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
-              >
-                <div className="flex items-center gap-2">
-                  <CalendarIcon />
-                  <span>SCHEDULE WITH MALCOLM</span>
-                </div>
-              </a>
+        
+        <div className="flex-grow overflow-hidden">
+          <iframe
+            src={embedUrl}
+            title="Quick Start Video Series"
+            className="w-full h-full border-0 bg-gray-900"
+            allow="fullscreen"
+          />
+        </div>
+        
+        {/* Schedule with Malcolm Section */}
+        <div className="border-t border-gray-700 bg-brand-dark/50 p-6 flex-shrink-0">
+          <div className="text-center space-y-4">
+            <div className="space-y-3">
+              <p className="text-gray-300 text-base leading-relaxed">
+                Every SSWOS Operator Gets A 1.5-Hour Custom "Life Blueprint" Session to Import Their Trauma-Tracks Into The Bio-Code/Mentor Platform.
+              </p>
+              <p className="text-gray-400 text-sm">
+                This builds your custom mentor to assist you in getting micro-shifts and identifying all your biological patterns.
+              </p>
             </div>
+            
+            <a
+              href="https://calendly.com/sealintelligence/spiritual-consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-gold text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-brand-light-gold transition-colors duration-300 shadow-lg hover:shadow-brand-gold/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
+            >
+              <div className="flex items-center gap-2">
+                <CalendarIcon />
+                <span>SCHEDULE WITH MALCOLM</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
