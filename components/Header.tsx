@@ -6,6 +6,7 @@ type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
 interface HeaderProps {
   activePortal: Portal;
   onPortalSwitch: (portal: Portal) => void;
+  onOpenQuickStart: () => void;
   onOpenSlaughterhouse: () => void;
   onOpenTreatmentOutline: () => void;
   onOpenShareModal: () => void;
@@ -90,7 +91,7 @@ const ClipboardListIcon = () => (
 );
 
 
-function Header({ activePortal, onPortalSwitch, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
+function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
   const portalButtonBaseStyle = "px-4 sm:px-6 py-2 text-sm font-bold font-serif transition-colors duration-300 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap";
   const activePortalStyle = "bg-black text-brand-gold shadow-inner";
   const inactivePortalStyle = "bg-gray-800/60 text-gray-400 hover:bg-gray-700/80 hover:text-white";
@@ -133,7 +134,17 @@ function Header({ activePortal, onPortalSwitch, onOpenSlaughterhouse, onOpenTrea
               </div>
             </div>
             
-            <div className="relative" ref={dropdownRef}>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={onOpenQuickStart}
+                className="bg-gray-800 text-white px-4 py-2 rounded-full flex items-center gap-2 font-bold hover:bg-gray-700 transition-colors duration-300 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-white border border-gray-600"
+                aria-label="Open Quick Start Video Series"
+              >
+                <PlayCircleIcon />
+                <span className="hidden sm:inline">Quick Start</span>
+              </button>
+              
+              <div className="relative" ref={dropdownRef}>
               <button 
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="bg-brand-gold text-black px-4 py-2 rounded-full flex items-center gap-2 font-bold hover:bg-brand-light-gold transition-colors duration-300 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold"
@@ -184,6 +195,7 @@ function Header({ activePortal, onPortalSwitch, onOpenSlaughterhouse, onOpenTrea
                   </div>
                 </div>
               )}
+              </div>
             </div>
           </div>
         </div>

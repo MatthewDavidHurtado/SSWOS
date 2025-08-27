@@ -110,6 +110,7 @@ function App() {
       <Header 
         activePortal={activePortal} 
         onPortalSwitch={handlePortalSwitch} 
+        onOpenQuickStart={() => setIsQuickStartOpen(true)}
         onOpenSlaughterhouse={() => setIsSlaughterhouseOpen(true)}
         onOpenTreatmentOutline={() => setIsTreatmentOutlineOpen(true)}
         onOpenShareModal={() => setIsShareModalOpen(true)}
@@ -176,7 +177,7 @@ function App() {
         )}
       </main>
       
-      <Footer onOpenQuickStart={() => setIsQuickStartOpen(true)} />
+      <Footer />
       {isSlaughterhouseOpen && <SlaughterhouseModal onClose={() => setIsSlaughterhouseOpen(false)} />}
       {isTreatmentOutlineOpen && <TreatmentOutlineModal onClose={() => setIsTreatmentOutlineOpen(false)} />}
       {isCipherModalOpen && <CipherModal onClose={() => setIsCipherModalOpen(false)} />}
