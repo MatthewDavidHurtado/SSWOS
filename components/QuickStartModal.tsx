@@ -23,8 +23,6 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
       window.removeEventListener('keydown', handleEsc);
     };
   }, [onClose]);
-  
-  const embedUrl = "https://service-3-part-training-quick-start-779946580524.us-west1.run.app";
 
   return (
     <div 
@@ -53,11 +51,11 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
           </button>
         </div>
         
-        <div className="flex-grow overflow-hidden">
+        <div className="flex-1 p-1">
           <iframe
-            src={embedUrl}
+            src="https://service-3-part-training-quick-start-779946580524.us-west1.run.app"
             title="Quick Start Video Series"
-            className="w-full h-full border-0 bg-gray-900"
+            className="w-full h-full border-0 rounded-b-md bg-gray-900"
             allow="fullscreen"
           />
         </div>
