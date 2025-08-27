@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 
 type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
@@ -15,7 +16,6 @@ interface HeaderProps {
   onLogout: () => void;
 }
 
-function Header({ activePortal, onPortalSwitch, onOpenLiveTraining, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
 
 const HeartIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -90,6 +90,18 @@ const ClipboardListIcon = () => (
     </svg>
 );
 
+const Header: React.FC<HeaderProps> = ({
+  activePortal,
+  onPortalSwitch,
+  onOpenLiveTraining,
+  onOpenSlaughterhouse,
+  onOpenTreatmentOutline,
+  onOpenShareModal,
+  onOpenCipherModal,
+  onOpenHealingMeditation,
+  onOpenSswosProcess,
+  onLogout
+}) => {
   const portalButtonBaseStyle = "px-4 sm:px-6 py-2 text-sm font-bold font-serif transition-colors duration-300 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap";
   const activePortalStyle = "bg-black text-brand-gold shadow-inner";
   const inactivePortalStyle = "bg-gray-800/60 text-gray-400 hover:bg-gray-700/80 hover:text-white";
