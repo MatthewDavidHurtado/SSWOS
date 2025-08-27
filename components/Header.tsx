@@ -149,7 +149,7 @@ const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
               <button
                 onClick={onOpenQuickStart}
-                className="bg-green-600 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-green-500 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-green-500 border border-green-500 whitespace-nowrap"
+                className="bg-brand-gold text-black px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-brand-light-gold transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold border border-brand-gold whitespace-nowrap"
                 aria-label="Open Quick Start Training"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -159,7 +159,7 @@ const Header: React.FC<HeaderProps> = ({
               </button>
               <button
                 onClick={onOpenLiveTraining}
-                className="bg-red-600 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-red-500 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-red-500 border border-red-500 whitespace-nowrap"
+                className="bg-gray-700 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-gray-600 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-gray-500 border border-gray-600 whitespace-nowrap"
                 aria-label="Open Live Training"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
