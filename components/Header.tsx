@@ -99,6 +99,7 @@ const PlayCircleIcon = () => (
 
 
 function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
+}
 function Header({ activePortal, onPortalSwitch, onOpenQuickStart, onOpenLiveTraining, onOpenSlaughterhouse, onOpenTreatmentOutline, onOpenShareModal, onOpenCipherModal, onOpenHealingMeditation, onOpenSswosProcess, onLogout }: HeaderProps) {
   const portalButtonBaseStyle = "px-4 sm:px-6 py-2 text-sm font-bold font-serif transition-colors duration-300 rounded-t-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold whitespace-nowrap";
   const activePortalStyle = "bg-black text-brand-gold shadow-inner";
