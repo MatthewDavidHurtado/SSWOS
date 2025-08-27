@@ -55,6 +55,21 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
           />
         </div>
         
+        {/* Video Navigation Buttons */}
+        <div className="p-4 border-t border-gray-700 bg-brand-dark/30">
+          <div className="flex justify-center gap-4">
+            <button className="bg-brand-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-brand-light-gold transition-colors">
+              Video #1
+            </button>
+            <button className="bg-brand-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-brand-light-gold transition-colors">
+              Video #2
+            </button>
+            <button className="bg-brand-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-brand-light-gold transition-colors">
+              Video #3
+            </button>
+          </div>
+        </div>
+        
         {/* Schedule with Malcolm Section */}
         <div className="p-6 border-t border-gray-700 bg-brand-dark/50">
           <div className="text-center space-y-4">
