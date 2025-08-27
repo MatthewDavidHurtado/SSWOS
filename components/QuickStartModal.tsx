@@ -54,41 +54,6 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
             allow="fullscreen"
           />
         </div>
-        
-        {/* Video Navigation Buttons */}
-        <div className="p-4 border-t border-gray-700 bg-brand-dark/30">
-          <div className="flex justify-center gap-4">
-            <button className="bg-brand-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-brand-light-gold transition-colors">
-              Video #1
-            </button>
-            <button className="bg-brand-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-brand-light-gold transition-colors">
-              Video #2
-            </button>
-            <button className="bg-brand-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-brand-light-gold transition-colors">
-              Video #3
-            </button>
-          </div>
-        </div>
-        
-        {/* Schedule with Malcolm Section */}
-        <div className="p-6 border-t border-gray-700 bg-brand-dark/50">
-          <div className="text-center space-y-4">
-            <p className="text-gray-300 text-sm leading-relaxed max-w-2xl mx-auto">
-              Every SSWOS Operator Gets A 1.5-Hour Custom "Life Blueprint" Session to Import Their Trauma-Tracks Into The Bio-Code/Mentor Platform.
-            </p>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto">
-              This builds your custom mentor to assist you in getting micro-shifts and identifying all your biological patterns.
-            </p>
-            <a
-              href="https://calendly.com/sealintelligence/spiritual-consultation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-brand-gold text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-brand-light-gold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold shadow-lg"
-            >
-              SCHEDULE WITH MALCOLM
-            </a>
-          </div>
-        </div>
       </div>
       <style>{`
         @keyframes fade-in {
