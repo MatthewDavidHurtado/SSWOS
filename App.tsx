@@ -38,6 +38,7 @@ function App() {
   const [isSswosProcessOpen, setIsSswosProcessOpen] = useState(false);
   const [isLiveTrainingOpen, setIsLiveTrainingOpen] = useState(false);
   const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
+  const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -242,6 +243,7 @@ function App() {
       {isHealingMeditationOpen && <HealingMeditationModal onClose={() => setIsHealingMeditationOpen(false)} />}
       {isSswosProcessOpen && <SswosProcessModal onClose={() => setIsSswosProcessOpen(false)} />}
       {isLiveTrainingOpen && <LiveTrainingModal onClose={() => setIsLiveTrainingOpen(false)} />}
+      {isQuickStartOpen && <QuickStartModal onClose={() => setIsQuickStartOpen(false)} />}
     </div>
   );
 }
