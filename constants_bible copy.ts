@@ -1,0 +1,31 @@
+
+import { BibleStudyLesson } from './types';
+
+export const BIBLE_STUDY_LESSONS: BibleStudyLesson[] = [
+  { id: 1, title: 'Lesson 1: Love', pdfUrl: 'https://drive.google.com/file/d/1G-KHTzC2rnPZoBsxpDA-cYKc_ZPy_agD/view?usp=sharing' },
+  { id: 2, title: 'Lesson 2: Joy', pdfUrl: 'https://drive.google.com/file/d/16DntoekXUlMf38F14YdA5J-HHGXeY2UH/view?usp=sharing' },
+  { id: 3, title: 'Lesson 3: Peace', pdfUrl: 'https://drive.google.com/file/d/1pOkZgGHlJzCjcduGvwl0qEV9xDFeSbdd/view?usp=sharing' },
+  { id: 4, title: 'Lesson 4: Patience', pdfUrl: 'https://drive.google.com/file/d/1RqoDmEPI5Qr4XNHG-Usgr4UyAaa9qM4t/view?usp=sharing' },
+  { id: 5, title: 'Lesson 5: Kindness', pdfUrl: 'https://drive.google.com/file/d/1_JNaXQTVcfD333hFVjRAoW8YLYZl4YwJ/view?usp=sharing' },
+  { id: 6, title: 'Lesson 6: Goodness', pdfUrl: 'https://drive.google.com/file/d/12kyQfL-DoPD6HXQORc5EbeO3mh6Vc7zv/view?usp=sharing' },
+  { id: 7, title: 'Lesson 7: Faithfulness', pdfUrl: 'https://drive.google.com/file/d/1E9FqwhojbMnjyPVBHqoTJKSisHtTqI4P/view?usp=sharing' },
+  { id: 8, title: 'Lesson 8: Gentleness', pdfUrl: 'https://drive.google.com/file/d/1VQpxh0B5_CrQ3ELpRmHbxgJ5ivoC6trL/view?usp=sharing' },
+  { id: 9, title: 'Lesson 9: Self-Control', pdfUrl: 'https://drive.google.com/file/d/1nv2ksYCa419xw9_yvuCqTE7Yh3s_po6Z/view?usp=sharing' },
+  { id: 10, title: 'Lesson 10: Meekness', pdfUrl: 'https://drive.google.com/file/d/1lanJ9aNzWUeIm-UFfxxYMhTTZUEV3Kod/view?usp=sharing' },
+  { id: 11, title: 'Lesson 11: Longsuffering', pdfUrl: 'https://drive.google.com/file/d/1hL_hY1WbXpIfxD3uk1B0WEUNoEVVNF4-/view?usp=sharing' },
+  { id: 12, title: 'Lesson 12: Humility', pdfUrl: 'https://drive.google.com/file/d/1Nz3on5DuIxO0tIy2UYwzm332nX3p7CMh/view?usp=sharing' },
+  { id: 13, title: 'Lesson 13: Joy', pdfUrl: 'https://drive.google.com/file/d/1YTMv9ai-aHPtsHiqLfSWaJdjXiAtbZvc/view?usp=sharing' },
+  { id: 14, title: 'Lesson 14: Peacemaking', pdfUrl: 'https://drive.google.com/file/d/1Wifk6hXzlyPGDnV7O4p9fok2F1Vj7ABh/view?usp=sharing' },
+  { id: 15, title: 'Lesson 15: Patience', pdfUrl: 'https://drive.google.com/file/d/1J8XmndeZMF_Fm03vTny-l9uLL4MGmjk2/view?usp=sharing' },
+  { id: 16, title: 'Lesson 16: Kindness', pdfUrl: 'https://drive.google.com/file/d/1XKKwsYtqK4fOsAN8aS2Z9-DHHIeSBzeD/view?usp=sharing' },
+  { id: 17, title: 'Lesson 17: Goodness', pdfUrl: 'https://drive.google.com/file/d/14fBXRzkP2Dy11fSv9GTe6DT0MvS7Fvq1/view?usp=sharing' },
+  { id: 18, title: 'Lesson 18: Hope', pdfUrl: 'https://drive.google.com/file/d/1tf_9DUj7nLLTruah5o0Qq976BLmJptIf/view?usp=sharing' },
+  { id: 19, title: 'Lesson 19: Faith', pdfUrl: 'https://drive.google.com/file/d/1L8gKUemRKi_IHz_Vpu9im5WJ3HIzkqzV/view?usp=sharing' },
+  { id: 20, title: 'Lesson 20: Gentleness', pdfUrl: 'https://drive.google.com/file/d/1ipStFch19bUEBayrBdpNNjhVDP031Lzp/view?usp=sharing' },
+  { id: 21, title: 'Lesson 21: Temperance', pdfUrl: 'https://drive.google.com/file/d/1BDqlwNXOtqXyzKJ2SihqdzqEpbZOGAUB/view?usp=sharing' },
+  { id: 22, title: 'Lesson 22: Meekness', pdfUrl: 'https://drive.google.com/file/d/1KgUs7hkdwO4g7uMzb084oajruDTqXeB8/view?usp=sharing' },
+  { id: 23, title: 'Lesson 23: Courage', pdfUrl: 'https://drive.google.com/file/d/1ZFqmk_2zifYYo1wltAIJaB761RRn3zbS/view?usp=sharing' },
+  { id: 24, title: 'Lesson 24: Gratitude', pdfUrl: 'https://drive.google.com/file/d/1U97QIiSrQGS0dGVKDZc5kHRnzaVcr4AN/view?usp=sharing' },
+  { id: 25, title: 'Lesson 25: Wisdom', pdfUrl: 'https://drive.google.com/file/d/1b2bFHJHKziT2K7Aw1RS03zRwPQZHteHd/view?usp=sharing' },
+  { id: 26, title: 'Lesson 26: Love', pdfUrl: 'https://drive.google.com/file/d/19s8qyPKLgHumU9MPdii1_Mog0lG-Y8Wc/view?usp=sharing' },
+];

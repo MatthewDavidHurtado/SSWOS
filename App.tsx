@@ -36,7 +36,6 @@ function App() {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [isHealingMeditationOpen, setIsHealingMeditationOpen] = useState(false);
   const [isSswosProcessOpen, setIsSswosProcessOpen] = useState(false);
-  const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
   const [isLiveTrainingOpen, setIsLiveTrainingOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -114,7 +113,6 @@ function App() {
       <Header 
         activePortal={activePortal} 
         onPortalSwitch={handlePortalSwitch} 
-        onOpenQuickStart={() => setIsQuickStartOpen(true)}
         onOpenLiveTraining={() => setIsLiveTrainingOpen(true)}
         onOpenSlaughterhouse={() => setIsSlaughterhouseOpen(true)}
         onOpenTreatmentOutline={() => setIsTreatmentOutlineOpen(true)}
@@ -241,7 +239,6 @@ function App() {
       {isShareModalOpen && <ShareModal onClose={() => setIsShareModalOpen(false)} />}
       {isHealingMeditationOpen && <HealingMeditationModal onClose={() => setIsHealingMeditationOpen(false)} />}
       {isSswosProcessOpen && <SswosProcessModal onClose={() => setIsSswosProcessOpen(false)} />}
-      {isQuickStartOpen && <QuickStartModal onClose={() => setIsQuickStartOpen(false)} />}
       {isLiveTrainingOpen && <LiveTrainingModal onClose={() => setIsLiveTrainingOpen(false)} />}
     </div>
   );
