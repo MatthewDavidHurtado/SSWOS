@@ -38,7 +38,6 @@ function App() {
   const [isSswosProcessOpen, setIsSswosProcessOpen] = useState(false);
   const [isLiveTrainingOpen, setIsLiveTrainingOpen] = useState(false);
   const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
-  const [isQuickStartOpen, setIsQuickStartOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
