@@ -223,6 +223,9 @@ const Header: React.FC<HeaderProps> = ({
                     <a href="https://vimeo.com/1114222111/5f5f77c4bf?share=copy" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <MusicIcon /> MK Album
                     </a>
+                    <a href="https://www.divineauthoring.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                        <UserIcon /> Private Session
+                    </a>
                     <button onClick={() => { onLogout(); setIsDropdownOpen(false); }} className={`${dropdownItemStyle} text-red-400 hover:text-red-300 hover:bg-red-900/20`} role="menuitem">
                         <LogoutIcon /> Logout
                     </button>
