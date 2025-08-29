@@ -54,6 +54,12 @@ const UserIcon = () => (
     </svg>
 );
 
+const MusicIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.369 4.369 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+    </svg>
+);
+
 const SparklesIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
     <path fillRule="evenodd" d="M5 2a1 1 0 00-1 1v1.586l-1.293-1.293a1 1 0 10-1.414 1.414L2.586 6H1a1 1 0 000 2h1.586l-1.293 1.293a1 1 0 101.414 1.414L4 9.414V11a1 1 0 002 0V9.414l1.293 1.293a1 1 0 101.414-1.414L6.414 8H8a1 1 0 000-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414L5 4.586V3a1 1 0 00-1-1zm14 6a1 1 0 011 1v1.586l1.293-1.293a1 1 0 111.414 1.414L18.414 11H20a1 1 0 110 2h-1.586l1.293 1.293a1 1 0 11-1.414 1.414L17 14.414V16a1 1 0 11-2 0v-1.586l-1.293 1.293a1 1 0 11-1.414-1.414L13.586 13H12a1 1 0 110-2h1.586l-1.293-1.293a1 1 0 011.414-1.414L15 9.414V8a1 1 0 011-1z" clipRule="evenodd" />
@@ -214,6 +220,9 @@ const Header: React.FC<HeaderProps> = ({
                         <ShareIcon /> Share Private Invite
                     </button>
                     <div className="border-t border-gray-700 my-1"></div>
+                    <a href="https://vimeo.com/1114222111/5f5f77c4bf?share=copy" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                        <MusicIcon /> MK Album
+                    </a>
                     <button onClick={() => { onLogout(); setIsDropdownOpen(false); }} className={`${dropdownItemStyle} text-red-400 hover:text-red-300 hover:bg-red-900/20`} role="menuitem">
                         <LogoutIcon /> Logout
                     </button>
