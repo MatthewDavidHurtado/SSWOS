@@ -40,7 +40,7 @@ function Footer() {
               Viewers and participants are encouraged to approach all spiritual practices and information with personal discernment and to take full responsibility for their own well-being. The creators and affiliates of this platform assume no liability for any actions taken based on the content provided herein.
             </p>
             <p className="pt-4 text-gray-400">
-              © {currentYear} Malcolm Kingley. <a href="https://www.kingleyfoundation.org" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-300 transition-colors duration-200">Kingley Foundation</a>. All Rights Reserved. Unauthorized reproduction, distribution, or broadcasting of this material is strictly prohibited.
+              © {currentYear} Malcolm Kingley. <a href="https://www.kingleyfoundation.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-300 transition-colors duration-200">Kingley Foundation</a>. All Rights Reserved. Unauthorized reproduction, distribution, or broadcasting of this material is strictly prohibited.
             </p>
           </div>
         </div>
