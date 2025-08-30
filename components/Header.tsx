@@ -205,6 +205,7 @@ const Header: React.FC<HeaderProps> = ({
                         <KeyIcon /> 777 CIPHER
                     </button>
                     <a href="https://v4-of-master-copy-of-with-scan-biological-code-ti-759385455270.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                    </a>
                     <a href="https://copy-of-v3-of-master-copy-of-with-scan-biological-759385455270.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <SparklesIcon /> Bio-Code/Mentor
                     </a>
@@ -233,9 +234,7 @@ const Header: React.FC<HeaderProps> = ({
                   </div>
                 </div>
               )}
-              </div>
-              )
-              }
+            </div>
             </div>
           </div>
         </div>
