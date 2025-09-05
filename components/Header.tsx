@@ -206,7 +206,7 @@ const Header: React.FC<HeaderProps> = ({
                     </button>
                     <a href="https://v4-of-master-copy-of-with-scan-biological-code-ti-759385455270.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                     </a>
-                    <a href="https://copy-of-v3-of-master-copy-of-with-scan-biological-759385455270.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                    <a href="https://bio-code-mentor-malcolm-kingley-779946580524.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <SparklesIcon /> Bio-Code/Mentor
                     </a>
                     <a href="https://discord.gg/7KBRn63nx7" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
