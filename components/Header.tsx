@@ -222,9 +222,6 @@ const Header: React.FC<HeaderProps> = ({
                         <ShareIcon /> Share Private Invite
                     </button>
                     <div className="border-t border-gray-700 my-1"></div>
-                    <a href="https://vimeo.com/1114222111/5f5f77c4bf?share=copy" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                        <MusicIcon /> MK Album
-                    </a>
                     <a href="https://www.divineauthoring.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <UserIcon /> Private Session
                     </a>
