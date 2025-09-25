@@ -106,6 +106,11 @@ const ShareModal: React.FC<ShareModalProps> = ({ onClose }) => {
       title: '"The Divine Wealth Code"',
       url: "https://the-divine-wealth-code-779946580524.us-west1.run.app",
       copyUrl: "https://www.divinewealthcode.org"
+    },
+    {
+      title: "I AM OK! No More Chronic Fatigue.",
+      url: "https://www.IAMOK.Life",
+      copyUrl: "https://www.IAMOK.Life"
     }
   ];
 
