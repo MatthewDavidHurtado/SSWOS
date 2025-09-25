@@ -144,10 +144,10 @@ const Header: React.FC<HeaderProps> = ({
               />
               <div>
                 <h1 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-wider" style={{ textShadow: '0 0 8px rgba(255, 255, 255, 0.3)' }}>
-                  ALLOW
+                  KINGLEY FOUNDATION
                 </h1>
                 <p className="text-xs sm:text-sm text-white/80 tracking-wide">
-                  Ministries: 508(c)(1)(a) - Private Church Organization
+                  508(c)(1)(a) Private Church
                 </p>
               </div>
             </div>
