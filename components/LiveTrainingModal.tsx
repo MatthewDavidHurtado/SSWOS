@@ -159,6 +159,26 @@ const LiveTrainingModal: React.FC<LiveTrainingModalProps> = ({ onClose }) => {
             <p><strong className="text-white">Time:</strong> Sep 3, 2025 04:00 PM Pacific Time (US and Canada)</p>
             <p><strong className="text-white">Frequency:</strong> Every week on Wed, 110 occurrence(s)</p>
           </div>
+
+          {/* Playback Recordings Link */}
+          <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-700/50">
+            <div className="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+              </svg>
+              <div>
+                <p className="text-purple-400 font-semibold mb-1">Missed a Session?</p>
+                <a 
+                  href="https://discord.com/channels/1404547715836149760/1420573027472510976"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-300 hover:text-purple-200 underline text-sm"
+                >
+                  PLAYBACK RECORDINGS (Private Discord Group)
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <style>{`
