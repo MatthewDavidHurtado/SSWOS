@@ -63,13 +63,13 @@ const MalcolmKingleyModal: React.FC<MalcolmKingleyModalProps> = ({ isOpen, onClo
           </div>
 
           <p className="text-gray-300 mb-6 text-center">
-            Password: GIVE_777!
+            Use the password: GIVE_777!
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="mk-password" className="block text-sm font-medium text-gray-300 mb-2">
-                Enter Password
+                Password
               </label>
               <input
                 type="password"
