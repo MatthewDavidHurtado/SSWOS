@@ -213,7 +213,7 @@ const Header: React.FC<HeaderProps> = ({
                         <CommunityIcon /> Community
                     </a>
                     <a href="https://www.malcolmkingley.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)} title="Password: GIVE_777!">
-                        <UserIcon /> Malcolm Kingley <span style={{ fontSize: '0.75rem', opacity: 0.7, marginLeft: '0.5rem' }}>(Password: GIVE_777!)</span>
+                        <UserIcon /> Malcolm Kingley <span style={{ fontSize: '0.75rem', opacity: 0.7, marginLeft: '0.5rem' }}>Password: GIVE_777!</span>
                     </a>
                      <a href="https://allow-ministries-tithing-app-779946580524.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <HeartIcon /> Tithe
