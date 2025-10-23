@@ -187,7 +187,7 @@ const Header: React.FC<HeaderProps> = ({
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute right-0 sm:right-0 left-0 sm:left-auto mt-2 w-full sm:w-64 max-w-xs sm:max-w-none bg-brand-dark/90 backdrop-blur-sm border border-gray-700 rounded-lg shadow-xl z-50 overflow-hidden animate-fade-in-down">
+                <div className="absolute right-0 mt-2 w-64 bg-brand-dark/90 backdrop-blur-sm border border-gray-700 rounded-lg shadow-xl z-50 animate-fade-in-down max-h-[80vh] overflow-y-auto">
                   <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     <a href="https://divine-law-healing-diagnostic-759385455270.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <CheckCircleIcon /> Diagnostic Checkup
