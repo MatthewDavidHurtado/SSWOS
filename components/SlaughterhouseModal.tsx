@@ -47,7 +47,7 @@ const SlaughterhouseModal: React.FC<SlaughterhouseModalProps> = ({ onClose }) =>
         </div>
         <div className="flex-grow p-1 h-full">
           <iframe
-            src="https://false-belief-slaughterhouse-759385455270.us-west1.run.app/"
+            src="https://false-belief-slaughterhouse-429911972561.us-west1.run.app"
             title="Slaughterhouse"
             className="w-full h-full border-0 rounded-b-md bg-gray-900"
           />
