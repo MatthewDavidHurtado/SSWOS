@@ -201,16 +201,6 @@ const Header: React.FC<HeaderProps> = ({
                 </svg>
                 <span className="hidden sm:inline">Quick-Start Training</span>
               </button>
-              <button
-                onClick={onOpenLiveTraining}
-                className="bg-gray-700 text-white px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-gray-600 transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-gray-500 border border-gray-600 whitespace-nowrap"
-                aria-label="Open Live Training"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                </svg>
-                <span className="hidden sm:inline">Live Training</span>
-              </button>
               
               <div className="relative" ref={dropdownRef}>
               <button 
@@ -236,29 +226,17 @@ const Header: React.FC<HeaderProps> = ({
                     <button onClick={() => { onOpenSswosProcess(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
                         <ClipboardListIcon /> The SSWOS Process
                     </button>
-                    <button onClick={() => { onOpenHealingMeditation(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
-                        <ShieldCheckIcon /> Daily Healing Meditation
-                    </button>
-                    <button onClick={() => { onOpenCipherModal(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
-                        <KeyIcon /> 777 CIPHER
-                    </button>
                     <a href="https://v4-of-master-copy-of-with-scan-biological-code-ti-759385455270.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                     </a>
-                    <a href="https://copy-of-v4-testnet-malcolm-kingley-super-mentor-a-779946580524.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                        <SparklesIcon /> Bio-Code/Mentor
+                    <a href="https://copy-of-quant-genesis-759300603350.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                        <SparklesIcon /> QUANT GENESIS
                     </a>
-                    <a href="https://discord.gg/7KBRn63nx7" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                        <CommunityIcon /> Community
+                    <a href="https://www.malcolmkingley.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                        <UserIcon /> Malcolm Kingley
                     </a>
-                    <a href="https://www.malcolmkingley.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)} title="Password: GIVE_777!">
-                        <UserIcon /> Malcolm Kingley <span style={{ fontSize: '0.75rem', opacity: 0.7, marginLeft: '0.5rem' }}>Password: GIVE_777!</span>
-                    </a>
-                     <a href="https://allow-ministries-tithing-app-779946580524.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                     <a href="https://allow-ministries-tithing-app-759300603350.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <HeartIcon /> Tithe
                     </a>
-                    <button onClick={() => { onOpenShareModal(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
-                        <ShareIcon /> Share Private Invite
-                    </button>
                     {showInstallButton && (
                       <button onClick={handleInstallClick} className={dropdownItemStyle} role="menuitem">
                           <DownloadIcon /> Download This App
@@ -323,22 +301,6 @@ const Header: React.FC<HeaderProps> = ({
                 role="tab"
                 >
                 Advanced Treatment
-                </button>
-                <a
-                href="https://www.gethealing.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${portalButtonBaseStyle} ${inactivePortalStyle}`}
-                role="tab"
-                >
-                Quantum Shift Journal
-                </a>
-                <button
-                onClick={onOpenSlaughterhouse}
-                className={`${portalButtonBaseStyle} ${inactivePortalStyle}`}
-                role="tab"
-                >
-                Slaughterhouse
                 </button>
             </div>
         </div>
