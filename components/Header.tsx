@@ -122,7 +122,6 @@ const Header: React.FC<HeaderProps> = ({
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -141,7 +140,6 @@ const Header: React.FC<HeaderProps> = ({
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      setShowInstallButton(true);
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -156,14 +154,24 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setDeferredPrompt(null);
+      }
+    } else {
+      // Fallback: provide instructions
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isAndroid = /Android/.test(navigator.userAgent);
 
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-
-    if (outcome === 'accepted') {
-      setDeferredPrompt(null);
-      setShowInstallButton(false);
+      if (isIOS) {
+        alert('To install this app on iOS:\n\n1. Tap the Share button\n2. Scroll down and tap "Add to Home Screen"\n3. Tap "Add" in the top right corner');
+      } else if (isAndroid) {
+        alert('To install this app:\n\n1. Tap the menu button (three dots)\n2. Select "Install app" or "Add to Home screen"');
+      } else {
+        alert('To install this app:\n\n1. Look for the install icon in your browser\'s address bar\n2. Or check your browser\'s menu for "Install" option');
+      }
     }
   };
   
@@ -234,11 +242,9 @@ const Header: React.FC<HeaderProps> = ({
                      <a href="https://allow-ministries-tithing-app-759300603350.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <HeartIcon /> Tithe
                     </a>
-                    {showInstallButton && (
-                      <button onClick={handleInstallClick} className={dropdownItemStyle} role="menuitem">
-                          <img src="https://i.imgur.com/zDr7njf.png" alt="777" className="h-5 w-5" /> SSWOS
-                      </button>
-                    )}
+                    <button onClick={handleInstallClick} className={dropdownItemStyle} role="menuitem">
+                        <img src="https://i.imgur.com/zDr7njf.png" alt="777" className="h-5 w-5" /> Download SSWOS
+                    </button>
                     <div className="border-t border-gray-700 my-1"></div>
                     <a href="https://www.divineauthoring.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <UserIcon /> Private Session
