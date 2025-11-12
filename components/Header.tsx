@@ -215,7 +215,7 @@ const Header: React.FC<HeaderProps> = ({
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-52 sm:w-64 bg-brand-dark/90 backdrop-blur-sm border border-gray-700 rounded-lg shadow-xl z-50 animate-fade-in-down max-h-[80vh] overflow-y-auto">
+                <div className="absolute right-0 mt-2 w-56 sm:w-64 bg-brand-dark/95 backdrop-blur-sm border border-gray-700 rounded-lg shadow-xl z-[100] animate-fade-in-down max-h-[70vh] overflow-y-auto">
                   <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     <a href="https://divine-law-healing-diagnostic-759385455270.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <CheckCircleIcon /> Diagnostic Checkup
@@ -236,7 +236,7 @@ const Header: React.FC<HeaderProps> = ({
                     </a>
                     {showInstallButton && (
                       <button onClick={handleInstallClick} className={dropdownItemStyle} role="menuitem">
-                          <DownloadIcon /> Download This App
+                          <img src="https://i.imgur.com/zDr7njf.png" alt="777" className="h-5 w-5" /> SSWOS
                       </button>
                     )}
                     <div className="border-t border-gray-700 my-1"></div>
