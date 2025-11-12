@@ -228,9 +228,6 @@ const Header: React.FC<HeaderProps> = ({
                     </button>
                     <a href="https://v4-of-master-copy-of-with-scan-biological-code-ti-759385455270.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                     </a>
-                    <a href="https://copy-of-quant-genesis-759300603350.us-west1.run.app" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                        <SparklesIcon /> QUANT GENESIS
-                    </a>
                     <a href="https://www.malcolmkingley.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <UserIcon /> Malcolm Kingley
                     </a>
