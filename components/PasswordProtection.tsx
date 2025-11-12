@@ -15,7 +15,7 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({ onPasswordCorre
     setError('');
 
     // Password check - you'll set this when you deploy
-    const correctPassword = 'MK777Q';
+    const correctPassword = 'MKULTRON368-777';
     
     console.log('Entered password:', password);
     console.log('Expected password:', correctPassword);
