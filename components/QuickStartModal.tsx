@@ -46,10 +46,11 @@ const QuickStartModal: React.FC<QuickStartModalProps> = ({ onClose }) => {
         </div>
         <div className="flex-grow p-1 h-full">
           <iframe
-            src="https://service-3-part-training-quick-start-779946580524.us-west1.run.app"
+            src="https://player.vimeo.com/video/1136180086?h=af8c681026&title=0&byline=0&portrait=0"
             title="Quick Start Training"
             className="w-full h-full border-0 rounded-b-md bg-gray-900"
-            allow="fullscreen"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
           />
         </div>
       </div>
