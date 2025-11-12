@@ -1,26 +1,39 @@
 {
   "name": "KINGLEY FOUNDATION - Divine Law Training",
-  "short_name": "Kingley Foundation",
-  "description": "Complete Divine Law Healing Training System",
+  "short_name": "SSWOS",
+  "description": "Complete Divine Law Healing Training System - 777 SSWOS",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#d4af37",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "icons": [
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "categories": ["education", "lifestyle", "health"],
-  "screenshots": []
+  "prefer_related_applications": false
 }
