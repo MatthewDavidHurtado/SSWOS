@@ -106,8 +106,8 @@ const SswosProcessModal: React.FC<SswosProcessModalProps> = ({ onClose }) => {
           <div className="space-y-10">
             <PhaseCard
               phase="I"
-              title="Bio code + Mentor x 3 Weeks+"
-              description={`This removes the (issues) within you that the "lines of force" attach to—a connection that stems from an unconscious propensity to react.`}
+              title="MK ULTRØN 3 Weeks +"
+              description={`(Do at least 1 - 3 Retroactive Treatment, Go Quantum, Absolute Treatment prompts/daily)`}
               transferText={`From "Physical"`}
               transferTarget={`To "Mental"`}
             />
