@@ -234,11 +234,6 @@ const Header: React.FC<HeaderProps> = ({
                     <button onClick={() => { onOpenSswosProcess(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
                         <ClipboardListIcon /> The SSWOS Process
                     </button>
-                    <a href="https://v4-of-master-copy-of-with-scan-biological-code-ti-759385455270.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                    </a>
-                    <a href="https://www.malcolmkingley.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                        <UserIcon /> Malcolm Kingley
-                    </a>
                      <a href="https://allow-ministries-tithing-app-759300603350.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <HeartIcon /> Tithe
                     </a>
@@ -246,9 +241,6 @@ const Header: React.FC<HeaderProps> = ({
                         <img src="https://i.imgur.com/zDr7njf.png" alt="777" className="h-5 w-5" /> Download SSWOS
                     </button>
                     <div className="border-t border-gray-700 my-1"></div>
-                    <a href="https://www.divineauthoring.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
-                        <UserIcon /> Private Session
-                    </a>
                     <button onClick={() => { onLogout(); setIsDropdownOpen(false); }} className={`${dropdownItemStyle} text-red-400 hover:text-red-300 hover:bg-red-900/20`} role="menuitem">
                         <LogoutIcon /> Logout
                     </button>
