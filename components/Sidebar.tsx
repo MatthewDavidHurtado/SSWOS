@@ -7,9 +7,10 @@ interface SidebarProps {
     videos: Video[];
     currentVideo: Video;
     onSelectVideo: (video: Video) => void;
+    portal: 'rawson' | 'eddy' | 'bible';
 }
 
-function Sidebar({ videos, currentVideo, onSelectVideo }: SidebarProps) {
+function Sidebar({ videos, currentVideo, onSelectVideo, portal }: SidebarProps) {
     return (
         <aside className="bg-brand-dark/50 backdrop-blur-sm rounded-lg border border-gray-800 sticky top-28 flex flex-col max-h-[calc(100vh-8rem)]">
             <div className="border-b border-gray-600 flex-shrink-0 p-4">
@@ -22,6 +23,7 @@ function Sidebar({ videos, currentVideo, onSelectVideo }: SidebarProps) {
                     videos={videos}
                     currentVideo={currentVideo}
                     onSelectVideo={onSelectVideo}
+                    portal={portal}
                 />
             </div>
         </aside>

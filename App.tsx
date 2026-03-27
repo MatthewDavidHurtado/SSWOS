@@ -159,6 +159,7 @@ function App() {
                     videos={COURSE_VIDEOS}
                     currentVideo={currentVideo}
                     onSelectVideo={handleSelectVideo}
+                    portal="rawson"
                   />
                )}
                {activePortal === 'eddy' && (
