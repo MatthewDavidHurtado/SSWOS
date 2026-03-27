@@ -135,11 +135,11 @@ function App() {
             <div className="lg:col-span-2 xl:col-span-3">
               {activePortal === 'rawson' && <VideoPlayer video={currentVideo} />}
               {activePortal === 'eddy' && (
-                <PdfViewer 
+                <PdfViewer
                   item={currentChapter}
                   headerDescription={
                     <>
-                      <span className="font-bold text-brand-light-gold">Daily Task:</span> Read 10 pages from the text. Use the dedicated "MBE A.I. Assistant" to deepen your understanding and overcome any obstacles in your study.
+                      <span className="font-bold text-brand-light-gold">Daily Task:</span> Read 10 pages from the text each day. Slowly with deep analysis for comprehension.
                     </>
                   }
                 />
