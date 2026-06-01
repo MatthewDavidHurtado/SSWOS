@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import HealingMusicPlayer from './HealingMusicPlayer';
 
 type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
 
@@ -122,6 +123,7 @@ const Header: React.FC<HeaderProps> = ({
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [isMusicPlayerOpen, setIsMusicPlayerOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -243,6 +245,9 @@ const Header: React.FC<HeaderProps> = ({
                     <a href="https://www.shewolfai.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <CommunityIcon /> She-Wolf
                     </a>
+                    <button onClick={() => { setIsMusicPlayerOpen(true); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
+                        <MusicIcon /> Healing Music
+                    </button>
                     <div className="border-t border-gray-700 my-1"></div>
                     <button onClick={() => { onLogout(); setIsDropdownOpen(false); }} className={`${dropdownItemStyle} text-red-400 hover:text-red-300 hover:bg-red-900/20`} role="menuitem">
                         <LogoutIcon /> Logout
@@ -330,8 +335,7 @@ const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      <style>{`
-        @keyframes glow {
+      <style>{`        @keyframes glow {
           0%, 100% {
             filter: drop-shadow(0 0 6px rgba(217, 164, 67, 0.5));
           }
@@ -363,6 +367,10 @@ const Header: React.FC<HeaderProps> = ({
           scrollbar-width: none;
         }
       `}</style>
+
+      {isMusicPlayerOpen && (
+        <HealingMusicPlayer onClose={() => setIsMusicPlayerOpen(false)} />
+      )}
     </>
   );
 }
