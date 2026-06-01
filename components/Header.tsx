@@ -234,7 +234,7 @@ const Header: React.FC<HeaderProps> = ({
                     <button onClick={() => { onOpenSswosProcess(); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
                         <ClipboardListIcon /> The SSWOS Process
                     </button>
-                     <a href="https://allow-ministries-tithing-app-759300603350.us-west1.run.app/" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                     <a href="https://www.malcolmkingley.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <HeartIcon /> Tithe
                     </a>
                     <button onClick={handleInstallClick} className={dropdownItemStyle} role="menuitem">
