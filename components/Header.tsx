@@ -240,6 +240,9 @@ const Header: React.FC<HeaderProps> = ({
                     <button onClick={handleInstallClick} className={dropdownItemStyle} role="menuitem">
                         <img src="https://i.imgur.com/zDr7njf.png" alt="777" className="h-5 w-5" /> Download SSWOS
                     </button>
+                    <a href="https://www.shewolfai.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
+                        <CommunityIcon /> She-Wolf
+                    </a>
                     <div className="border-t border-gray-700 my-1"></div>
                     <button onClick={() => { onLogout(); setIsDropdownOpen(false); }} className={`${dropdownItemStyle} text-red-400 hover:text-red-300 hover:bg-red-900/20`} role="menuitem">
                         <LogoutIcon /> Logout
