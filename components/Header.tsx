@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import HealingMusicPlayer from './HealingMusicPlayer';
 
-type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
+type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment' | 'healing-music';
 
 interface HeaderProps {
   activePortal: Portal;
@@ -123,7 +122,6 @@ const Header: React.FC<HeaderProps> = ({
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-  const [isMusicPlayerOpen, setIsMusicPlayerOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -245,7 +243,7 @@ const Header: React.FC<HeaderProps> = ({
                     <a href="https://www.shewolfai.com" target="_blank" rel="noopener noreferrer" className={dropdownItemStyle} role="menuitem" onClick={() => setIsDropdownOpen(false)}>
                         <CommunityIcon /> She-Wolf
                     </a>
-                    <button onClick={() => { setIsMusicPlayerOpen(true); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
+                    <button onClick={() => { onPortalSwitch('healing-music'); setIsDropdownOpen(false); }} className={dropdownItemStyle} role="menuitem">
                         <MusicIcon /> Healing Music
                     </button>
                     <div className="border-t border-gray-700 my-1"></div>
@@ -367,10 +365,6 @@ const Header: React.FC<HeaderProps> = ({
           scrollbar-width: none;
         }
       `}</style>
-
-      {isMusicPlayerOpen && (
-        <HealingMusicPlayer onClose={() => setIsMusicPlayerOpen(false)} />
-      )}
     </>
   );
 }

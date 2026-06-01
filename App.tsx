@@ -23,8 +23,9 @@ import HealingMeditationModal from './components/HealingMeditationModal';
 import SswosProcessModal from './components/SswosProcessModal';
 import QuickStartModal from './components/QuickStartModal';
 import LiveTrainingModal from './components/LiveTrainingModal';
+import HealingMusicPage from './components/HealingMusicPage';
 
-type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment';
+type Portal = 'rawson' | 'eddy' | 'bible' | 'treatment' | 'advanced-treatment' | 'healing-music';
 
 function App() {
   const [hasAccess, setHasAccess] = useState(false);
@@ -105,7 +106,7 @@ function App() {
     return <LoginScreen onLoginSuccess={handleLoginSuccess} />;
   }
   
-  const isFullWidthView = activePortal === 'treatment' || activePortal === 'advanced-treatment';
+  const isFullWidthView = activePortal === 'treatment' || activePortal === 'advanced-treatment' || activePortal === 'healing-music';
 
   return (
     <div className="min-h-screen bg-black text-white font-sans flex flex-col">
@@ -127,6 +128,7 @@ function App() {
           <>
             {activePortal === 'treatment' && <TreatmentView />}
             {activePortal === 'advanced-treatment' && <AdvancedTreatmentView />}
+            {activePortal === 'healing-music' && <HealingMusicPage />}
           </>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-8">
