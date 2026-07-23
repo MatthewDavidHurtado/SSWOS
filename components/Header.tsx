@@ -7,7 +7,6 @@ interface HeaderProps {
   activePortal: Portal;
   onPortalSwitch: (portal: Portal) => void;
   onOpenLiveTraining: () => void;
-  onOpenQuickStart: () => void;
   onOpenSlaughterhouse: () => void;
   onOpenTreatmentOutline: () => void;
   onOpenShareModal: () => void;
@@ -107,7 +106,6 @@ const Header: React.FC<HeaderProps> = ({
   activePortal,
   onPortalSwitch,
   onOpenLiveTraining,
-  onOpenQuickStart,
   onOpenSlaughterhouse,
   onOpenTreatmentOutline,
   onOpenShareModal,
@@ -199,16 +197,18 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              <button
-                onClick={onOpenQuickStart}
+              <a
+                href="https://www.allnessofmind.life"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-gold text-black px-3 sm:px-4 py-2 rounded-full flex items-center gap-1 sm:gap-2 font-bold hover:bg-brand-light-gold transition-colors duration-300 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark focus-visible:ring-brand-gold border border-brand-gold whitespace-nowrap"
-                aria-label="Open Quick Start Training"
+                aria-label="Open Spiritual Healing Drive-Thru"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                 </svg>
-                <span className="hidden sm:inline">Quick-Start Training</span>
-              </button>
+                <span className="hidden sm:inline">Spiritual Healing Drive-Thru</span>
+              </a>
               
               <div className="relative" ref={dropdownRef}>
               <button 
